@@ -1,14 +1,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: online-shop
-  namespace: online-shop-prod
+  name: online-app-hpa
+  namespace: online-app
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: online-shop
-  minReplicas: 2
+    name: online-app-deployment
+  minReplicas: 3
   maxReplicas: 5
   metrics:
   - type: Resource

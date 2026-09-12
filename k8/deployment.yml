@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-app-deployment
+  namespace: online-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: online-app
+  template:
+    metadata:
+      labels:
+        app: online-app
+    spec:
+      containers:
+      - name: online-app
+        image: fazi12/online-app:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: online-app-config
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

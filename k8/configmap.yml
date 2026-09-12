@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: online-app-config
+  namespace: online-app
+data:
+  NODE_ENV: production
+  Host: "0.0.0.0"
+  PORT: "5173"
+  VITE_HOST: "0.0.0.0"
