@@ -130,7 +130,7 @@ CI/CD
 Cloud Infrastructure
 
 
-<img width="1920" height="1080" alt="Screenshot from 2026-09-12 17-02-47" src="https://github.com/user-attachments/assets/06065ae8-eb79-4c3f-a55a-519bc89a7111" />
+
 
 
 
